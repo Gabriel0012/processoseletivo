@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarImovelComponent implements OnInit {
 
-  public endereco: any = {}
   constructor() { 
-    this.endereco = {cep: ''}
   }
 
   ngOnInit(): void {
@@ -17,9 +15,5 @@ export class CadastrarImovelComponent implements OnInit {
 
   alert() {
     window.alert('IMOVEL CADASTRADO COM SUCESSO!!')
-  }
-
-  buscaCEP() {
-    window.alert(this.endereco.cep)
   }
 }

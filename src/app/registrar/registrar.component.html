@@ -1,1 +1,39 @@
-<p>registrar works!</p>
+<div class="separator"></div>
+
+<div class="container-fluid">
+  <div class="container bg-body p-5 rounded col-md-4 shadow-lg">
+    <p class="text-secondary">Faça o login no sistema</p>
+    <form class="row g-3">
+      <div class="col-md-12">
+        <div class="form-floating">
+          <input type="email" class="form-control" id="inputEmail4" placeholder="email@email.com">
+          <label for="inputEmail4">Email</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="inputAddress" placeholder="">
+          <label for="inputAddress">Nome</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-floating">
+          <input type="password" class="form-control" id="inputAddress" placeholder="">
+          <label for="inputAddress">Senha</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-floating">
+          <input type="password" class="form-control" id="inputAddress" placeholder="">
+          <label for="inputAddress">Confirmar Senha</label>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-danger btn-block d-block" [routerLink]="['/inicio']"
+            routerLinkActive="router-link-active">Criar conta</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
