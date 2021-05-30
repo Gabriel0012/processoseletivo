@@ -1,0 +1,79 @@
+<div class="separator"></div>
+
+<div class="container">
+  <div class="container">
+    <p class="text-secondary">Imóveis para comprar/alugar</p>
+    <p class="text-bold">Belo Horizonte MG</p>
+
+    <div class="row">
+      <div class="col-md-2">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+            <option value="1" selected>Casa</option>
+            <option value="2">Apartamento</option>
+          </select>
+          <label for="floatingSelectGrid">Casa / Apartamento</label>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+            <option value="1" selected>Aluguel</option>
+            <option value="2">Compra</option>
+          </select>
+          <label for="floatingSelectGrid">Tipo</label>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="form-floating">
+          <input type="number" class="form-control" id="floatingInput" placeholder="valor min locação">
+          <label for="floatingInput">Min</label>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-floating">
+          <input type="number" class="form-control" id="floatingPassword" placeholder="valor max locação">
+          <label for="floatingPassword">Máx</label>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="form-floating">
+          <input class="form-control me-2" type="search" list="datalistOptions" id="exampleDataList"
+            placeholder="Digite sua cidade..." aria-label="Procurar endereço">
+          <label for="floatingPassword">Cidade</label>
+          <datalist id="datalistOptions">
+            <option value="Belo Horizonte">
+            <option value="São Paulo">
+            <option value="Rio de Janeiro">
+            <option value="Salvador">
+            <option value="Cuiaba">
+          </datalist>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary d-flex float-end mt-2" type="submit" (click)="searchImoveis()">
+          <i class="material-icons">search</i> Buscar</button>
+      </div>
+    </div>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="bg-body rounded my-3 bg-light">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Pesquisar imóveis</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="position-relative">
+    <div class="position-absolute top-50 start-50">
+      <div class="spinner-grow text-danger" role="status" *ngIf="loading">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>
+<app-imoveis-lista *ngIf="!loading"></app-imoveis-lista>

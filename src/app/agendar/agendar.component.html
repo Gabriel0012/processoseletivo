@@ -1,0 +1,37 @@
+<div class="separator"></div>
+
+<div class="container-fluid">
+  <div class="container bg-body p-5 rounded col-md-7 shadow-lg">
+    <p class="text-secondary">Preencha o formulário para agendar sua visita ao local</p>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="email" class="form-control" id="inputEmail4" placeholder="email@email.com">
+          <label for="inputEmail4">Email</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="date" class="form-control" id="inputPassword4">
+          <label for="inputPassword4">Data da visita</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="tel" class="form-control" id="inputAddress" placeholder="(99) 9 9999-9999">
+          <label for="inputAddress">Telefone</label>
+        </div>
+      </div>
+      <div class="col-12">
+        <p class="text-secondary">Você receberá uma confirmação via e-mail ou Whatsapp</p>
+      </div>
+      <div class="col-12 d-flex">
+        <button class="btn btn-success">Nosso Whatsapp</button>
+        <button type="submit" class="btn btn-danger d-flex mx-2" (click)="alert()">
+          <span class="material-icons">
+            date_range
+          </span>Agendar</button>
+      </div>
+    </form>
+  </div>
+</div>

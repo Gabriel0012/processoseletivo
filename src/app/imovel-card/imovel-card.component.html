@@ -1,0 +1,21 @@
+<div class="card rounded-3" style="width: 18rem;">
+  <img [src]="imovel.foto" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="text-secondary py-1">{{imovel.ap_casa}}</p>
+    <h5 class="card-title">{{imovel.endereco}}</h5>
+    <p class="card-text">{{imovel.cidade}}</p>
+    <h5 class="text-success">{{ imovel.preco | currency:'BRL' }}</h5>
+    <div class="clearfix">
+      <a href="" [routerLink]="['/imovel']" routerLinkActive="router-link-active" class="btn btn-success btn-icon">
+        <span class="material-icons">
+          date_range
+        </span>
+        Saber mais</a>
+      <a (click)="favorite()" class="btn btn-outline-danger ms-1 btn-icon" *ngIf="!imovel.favorita">
+        <span class="material-icons">
+          favorite
+        </span>
+        Favoritar</a>
+    </div>
+  </div>
+</div>

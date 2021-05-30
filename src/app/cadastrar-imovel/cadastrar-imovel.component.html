@@ -1,0 +1,61 @@
+<div class="separator"></div>
+
+<div class="container-fluid">
+  <div class="container bg-body p-5 rounded col-md-7 shadow-lg">
+    <p class="text-secondary">Preencha o formulário para anunciar seu imóvel</p>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="email" class="form-control" id="inputEmail4" placeholder="email@email.com">
+          <label for="inputEmail4">Email</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="tel" class="form-control" id="inputAddress" placeholder="(99) 9 9999-9999">
+          <label for="inputAddress">Telefone</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+            <option value="1" selected>Aluguel</option>
+            <option value="2">Compra</option>
+          </select>
+          <label for="floatingPassword">Tipo</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+            <option value="1" selected>Casa</option>
+            <option value="2">Apartamento</option>
+          </select>
+          <label for="floatingPassword">Casa ou Apartamento</label>
+        </div>
+      </div>
+      <div class="divider">Endereço</div>
+      <div class="col-md-4">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="inputAddress" placeholder="" [(ngModel)]="endereco.cep" (change)="buscaCEP()">
+          <label for="inputAddress">CEP</label>
+        </div>
+      </div>
+      <div class="col-12">
+        <p class="text-secondary">Você receberá uma confirmação via e-mail ou Whatsapp</p>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="number" class="form-control text-danger" id="inputAddress" placeholder="">
+          <label for="inputAddress">Valor do imóvel</label>
+        </div>
+      </div>
+      <div class="col-12 ">
+        <button type="submit" class="btn btn-danger d-flex" (click)="alert()">
+          <span class="material-icons">
+            check
+          </span>Anunciar</button>
+      </div>
+    </form>
+  </div>
+</div>

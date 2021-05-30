@@ -1,0 +1,111 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../assets/imgs/interior2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/imgs/interior2.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+<div class="separator"></div>
+
+<div class="container-fluid">
+  <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb" class="bg-body rounded p-3" style="background-color: #f8f9fa!important;">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+      <li class="breadcrumb-item" aria-current="page">Pesquisar imóveis</li>
+      <li class="breadcrumb-item active" aria-current="page">{{ imovel.endereco }} - {{ imovel.cidade }}</li>
+    </ol>
+  </nav>
+
+  <p class="text-secondary">{{ imovel.ap_casa }}</p>
+  <h1>{{ imovel.endereco }}</h1>
+  <h5 class="text-secondary"> {{ imovel.cidade }} </h5>
+
+  <div class="bg-light text-justify p-4 mt-4 rounded">
+    <div class="row">
+      <div class="col col-xs-12 col-sm-7">
+        <p class="text-secondary">SOBRE O IMÓVEL</p>
+
+        <section class="paragrafo">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tenetur perferendis qui architecto, tempora
+            deleniti
+            amet dolore dignissimos ipsum ex necessitatibus ipsa beatae, eius unde doloribus? Voluptatem perspiciatis
+            expedita
+            libero. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, pariatur rem animi qui maxime
+            quasi
+            recusandae veniam velit quaerat officia blanditiis, sapiente aliquam tempora amet adipisci, nihil
+            perspiciatis
+            hic
+            ullam.</p>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tenetur perferendis qui architecto, tempora
+            deleniti
+            amet dolore dignissimos ipsum ex necessitatibus ipsa beatae, eius unde doloribus? Voluptatem perspiciatis
+            expedita
+            libero. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, pariatur rem animi qui maxime
+            quasi
+            recusandae veniam velit quaerat officia blanditiis, sapiente aliquam tempora amet adipisci, nihil
+            perspiciatis
+            hic
+            ullam.</p>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tenetur perferendis qui architecto, tempora
+            deleniti
+            amet dolore dignissimos ipsum ex necessitatibus ipsa beatae, eius unde doloribus? Voluptatem perspiciatis
+            expedita
+            libero. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, pariatur rem animi qui maxime
+            quasi
+            recusandae veniam velit quaerat officia blanditiis, sapiente aliquam tempora amet adipisci, nihil
+            perspiciatis
+            hic
+            ullam.</p>
+        </section>
+      </div>
+      <div class="col col-xs-7 col-sm-5">
+        <div class="card ms-5" style="width: 23rem;">
+          <img [src]="imovel.foto" class="card-img-top" alt="Imóvel 1">
+          <div class="card-body">
+            <p class="text-secondary mt-2">{{ imovel.ap_casa }}</p>
+            <h5 class="card-title">{{ imovel.endereco }}</h5>
+
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat repudiandae nihil,
+              quia sequi magni sunt itaque nostrum quod omnis debitis officia voluptates excepturi, ab incidunt vitae
+              quasi error aspernatur nam?</p>
+
+            <p class="text-secondary">{{ imovel.tipo }}</p>
+
+            <h5 class="text-success mt-2">{{ imovel.preco | currency:'BRL' }}</h5>
+            <a href="" [routerLink]="['/agendar']" routerLinkActive="router-link-active"  class="btn btn-primary btn-icon">
+              <span class="material-icons">
+                date_range
+              </span>
+              Agendar</a>
+            <a (click)="favorite()" class="btn btn-outline-danger ms-2 btn-icon">
+              <span class="material-icons">
+                favorite
+              </span>
+              Favoritar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

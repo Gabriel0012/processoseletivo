@@ -1,0 +1,11 @@
+.container-fluid {
+  width: 90% !important;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.logo {
+  font-size: 12px;
+}
